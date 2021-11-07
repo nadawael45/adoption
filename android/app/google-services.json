@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "995457656845",
+    "project_id": "adopted-pets",
+    "storage_bucket": "adopted-pets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995457656845:android:ea23f67f9ac826fafccd44",
+        "android_client_info": {
+          "package_name": "com.nn.petsadoption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995457656845-0kcbblurimelakaov04eiadvju82e52m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5xBWIcFQn2Z-9DcCIUV5AGLJ7UjoacIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995457656845-0kcbblurimelakaov04eiadvju82e52m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
