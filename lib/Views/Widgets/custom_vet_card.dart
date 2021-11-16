@@ -4,6 +4,12 @@ import 'package:petsadoption/Views/Widgets/custom_txtStyle.dart';
 import 'package:petsadoption/constants.dart';
 
 class CustomVetCard extends StatelessWidget {
+  String? city;
+  String? img;
+  String? type;
+
+  CustomVetCard({this.city, this.img, this.type});
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -22,11 +28,13 @@ class CustomVetCard extends StatelessWidget {
                     topRight: Radius.circular(10)),
                 image: DecorationImage(
                     image: NetworkImage(
-                        'https://cdn1.vectorstock.com/i/1000x1000/13/20/vet-clinic-with-doctor-vector-21191320.jpg'),
+                      img!,
+                    ),
                     fit: BoxFit.fill)),
           ),
-          SizedBox(height: 3,),
-
+          SizedBox(
+            height: 3,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,17 +45,17 @@ class CustomVetCard extends StatelessWidget {
                 size: 15,
               ),
               CustomTxtStyle(
-                  text: 'kafr el sheikh',
+                  text: city,
                   txtSize: 13,
                   fontWeight: FontWeight.normal,
                   color: Colors.grey.shade700),
             ],
           ),
           CustomTxtStyle(
-              text: 'Vet Clinic',
+              text: type,
               txtSize: 14,
               fontWeight: FontWeight.bold,
-              color: primaryColor),
+              color: type=='Vet Clinic'?primaryColor:grey),
         ],
       ),
     );

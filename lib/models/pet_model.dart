@@ -17,12 +17,13 @@ class PetModel{
   String?sex;
   String?age;
   String?animaltype;
+  
 
 
   PetModel({required this.name,required this.color,required this.birth,required this.filelink,required this.price,required this.sex,
     required  this.image,required this.weight,required this.clinicname,required this.locationLink,
     required  this.ownername,required this.ownerlocation,required this.ownerphone,required this.owneremail,required this.ownerid,
-    required this.age,required this.animaltype,required this.vaccinated});
+    required this.age,required this.animaltype,required this.vaccinated,});
 
   toJson(){
     return{

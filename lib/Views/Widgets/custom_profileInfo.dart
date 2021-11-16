@@ -12,7 +12,7 @@ class CustomProfileInfo extends StatelessWidget {
       child: Card(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10.r))),
-        elevation: 10,
+        elevation: 8,
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(

@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petsadoption/Views/Screens/pet_details.dart';
-import 'package:petsadoption/Views/Screens/setting_screen.dart';
 
 import 'package:petsadoption/Views/Widgets/custom_iconBTN.dart';
 import 'package:petsadoption/Views/Widgets/custom_petCard.dart';
@@ -36,10 +35,16 @@ class _AllAnimalsState extends State<AllAnimals> {
   Store store= Store();
   List<PetModel>petlist=[];
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    animalName='Dogs';
+  }
+  @override
   Widget build(BuildContext context) {
     return
     StreamBuilder<QuerySnapshot>(
-      stream:store.getAllAnimals() ,
+      stream:store.getAllAnimals(animalName) ,
       builder: (context,snapshot){
         if(snapshot.hasData){
           for(var doc in snapshot.data!.docs){
@@ -190,7 +195,14 @@ class _AllAnimalsState extends State<AllAnimals> {
           );
 
         }else{
-          return Center(child: Text('no data'));
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(color: primaryColor,),
+              CustomTxtStyle(text: 'Check your internet connection',)
+            ],
+          );
         }
       }
      

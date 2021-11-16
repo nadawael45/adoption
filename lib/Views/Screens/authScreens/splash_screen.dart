@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:petsadoption/Views/Screens/onboarding_screen.dart';
+import 'onboarding_screen.dart';
 import 'package:petsadoption/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'home_screen.dart';
+import '../navBtnScreens/home_screen.dart';
 import 'login.dart';
 class SplashScreen extends StatefulWidget {
   @override

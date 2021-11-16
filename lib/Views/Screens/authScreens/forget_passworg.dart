@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:petsadoption/Views/Screens/home_screen.dart';
-import 'package:petsadoption/Views/Screens/login.dart';
+import '../navBtnScreens/home_screen.dart';
+import 'login.dart';
 import 'package:petsadoption/Views/Widgets/customTextFormField.dart';
 import 'package:petsadoption/Views/Widgets/custom_btn.dart';
 import 'package:petsadoption/Views/Widgets/custom_txtStyle.dart';

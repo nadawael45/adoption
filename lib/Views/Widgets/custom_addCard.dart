@@ -14,7 +14,7 @@ class CustomAddCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150.h,
+      height: 160.h,
       width: 1.sw,
       child: Card(
           shape: RoundedRectangleBorder(
@@ -26,23 +26,19 @@ class CustomAddCard extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Expanded(
-                flex: 2,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  SizedBox(height: 10,),
-                  CustomTxtStyle(text:text1,txtSize: 18,fontWeight: FontWeight.bold, color:Colors.grey.shade700,),
-                  Container(width: 0.4.sw,
-                      child: Expanded(child: CustomTxtStyle(text:text2,txtSize: 11, fontWeight:FontWeight.normal, color:Colors.grey.shade700,lines:4))),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                SizedBox(height: 10,),
+                CustomTxtStyle(text:text1,txtSize: 17.sp,fontWeight: FontWeight.bold, color:Colors.grey.shade700,),
+                Container(width: 0.45.sw,
+                    child: CustomTxtStyle(text:text2,txtSize: 11.sp, fontWeight:FontWeight.normal, color:Colors.grey.shade700,lines:4)),
 
-                ],),
-              ),
+              ],),
             ),
             Expanded(
-              flex: 1,
-              child: Image.asset(img!,fit:BoxFit.fill,height: 130.h,width: 80.w,
+              child: Image.asset(img!,fit:BoxFit.fill,height: 130.h,width: 0.4.sw,
               ),
             ),
 

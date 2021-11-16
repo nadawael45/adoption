@@ -23,15 +23,9 @@ class PetDetails extends StatefulWidget {
 
 class _PetDetailsState extends State<PetDetails> {
   var id;
-  adoptAnimal()async{
-    SharedPreferences pref=await SharedPreferences.getInstance();
-    id=pref.getString('userUid');
-    FirebaseFirestore firestore =FirebaseFirestore.instance;
-    firestore.collection('users').doc(id).collection('Reservations').doc().set({
-      'animal_name':'dog'
-    });
 
-  }
+
+
 
   launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -198,7 +192,7 @@ class _PetDetailsState extends State<PetDetails> {
                                 backgroundColor: Colors.white,),
 
                               Expanded(child: CustomBtn(labelText: 'Adopt Now',size:18 ,height: 36.h,onTap: (){
-                            adoptAnimal();
+
                               },)),
                             ],),
                         ),

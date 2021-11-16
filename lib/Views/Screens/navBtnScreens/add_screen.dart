@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:petsadoption/Views/Screens/all_animals_screen.dart';
+import 'package:petsadoption/Views/Screens/all_vet_screen.dart';
+import 'package:petsadoption/Views/Screens/create_vet_profile.dart';
 import 'package:petsadoption/Views/Widgets/custom_addCard.dart';
 import 'package:petsadoption/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'adopt_screen.dart';
-import 'cereate_pet_profile.dart';
+import '../cereate_pet_profile.dart';
 class AddScreen extends StatelessWidget {
   String text1='Adopet A pet';
   String text2='We have the cutest pets available all waiting you to make you their new friend';
@@ -27,18 +30,25 @@ class AddScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Column(
+            child:
+            Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
               InkWell(
+                  onTap: (){Navigator.pushNamed(context, AllAnimals.id);},
                   child: CustomAddCard(text1, text2, 'images/undraw_friends_r511.png')),
               SizedBox(height: 15,),
                 InkWell(onTap: (){Navigator.pushNamed(context, CreatePetProfile.id);},
                     child: CustomAddCard(text3, text4, 'images/undraw_pet_adoption_2qkw.png')),
                 SizedBox(height: 15,),
-                CustomAddCard(text5, text6, 'images/vetclinic.jpg'),
+                InkWell(
+                    onTap: (){Navigator.pushNamed(context, CreateVetProfile.id);},
+
+                    child: CustomAddCard(text5, text6, 'images/vetclinic.jpg')),
                 SizedBox(height: 15,),
-                CustomAddCard(text7, text8, 'images/doctor.jpg'),
+                InkWell(
+                    onTap: (){Navigator.pushNamed(context, AllVetScreen.id);},
+                    child: CustomAddCard(text7, text8, 'images/doctor.jpg')),
 
 
             ],),

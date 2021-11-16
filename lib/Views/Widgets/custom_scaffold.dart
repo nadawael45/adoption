@@ -7,12 +7,14 @@ import '../../constants.dart';
 class CustomScaffold extends StatelessWidget {
   Widget? body;
   Widget? bottomNav;
+  AppBar? appBar;
 
-  CustomScaffold({this.body, this.bottomNav});
+  CustomScaffold({this.body, this.bottomNav,this.appBar});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar,
       backgroundColor: lightPink,
       bottomNavigationBar:bottomNav ,
 

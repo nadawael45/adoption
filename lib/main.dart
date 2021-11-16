@@ -1,16 +1,19 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:petsadoption/Views/Screens/Sign_up.dart';
+import 'package:petsadoption/Views/Screens/all_vet_screen.dart';
+import 'Views/Screens/authScreens/Sign_up.dart';
 import 'package:petsadoption/Views/Screens/all_animals_screen.dart';
 import 'package:petsadoption/Views/Screens/cereate_pet_profile.dart';
-import 'package:petsadoption/Views/Screens/forget_passworg.dart';
-import 'package:petsadoption/Views/Screens/home_screen.dart';
-import 'package:petsadoption/Views/Screens/login.dart';
-import 'package:petsadoption/Views/Screens/splash_screen.dart';
+import 'Views/Screens/authScreens/forget_passworg.dart';
+import 'Views/Screens/create_vet_profile.dart';
+import 'Views/Screens/mypets.dart';
+import 'Views/Screens/navBtnScreens/home_screen.dart';
+import 'Views/Screens/authScreens/login.dart';
+import 'Views/Screens/authScreens/splash_screen.dart';
 import 'package:petsadoption/constants.dart';
 import 'package:provider/provider.dart';
-import 'Views/Screens/onboarding_screen.dart';
+import 'Views/Screens/authScreens/onboarding_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Views/Screens/pet_details.dart';
@@ -73,6 +76,11 @@ class MyApp extends StatelessWidget {
           HomePage.id: (context) => HomePage(),
           AllAnimals.id: (context) => AllAnimals(),
           CreatePetProfile.id: (context) => CreatePetProfile(),
+          CreateVetProfile.id: (context) => CreateVetProfile(),
+          AllVetScreen.id: (context) => AllVetScreen(),
+          MyPets.id: (context) => MyPets(),
+
+
 
 
         },

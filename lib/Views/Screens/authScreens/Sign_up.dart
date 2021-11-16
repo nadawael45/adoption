@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:petsadoption/Views/Screens/Sign_up.dart';
 import 'package:petsadoption/Views/Widgets/customTextFormField.dart';
 import 'package:petsadoption/Views/Widgets/custom_btn.dart';
-import 'package:petsadoption/Views/Widgets/custom_iconBTN.dart';
 import 'package:petsadoption/Views/Widgets/custom_txtStyle.dart';
 import 'package:petsadoption/controller/auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../constants.dart';
-import 'home_screen.dart';
+import '../../../constants.dart';
+import '../navBtnScreens/home_screen.dart';
 import 'login.dart';
 
 class SignUp extends StatefulWidget {

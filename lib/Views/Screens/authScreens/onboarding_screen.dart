@@ -1,12 +1,12 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petsadoption/Views/Screens/Sign_up.dart';
+import 'Sign_up.dart';
 import 'package:petsadoption/Views/Widgets/custom_btn.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   static String id='onboarding';

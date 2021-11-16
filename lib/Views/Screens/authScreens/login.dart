@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:petsadoption/Views/Screens/Sign_up.dart';
-import 'package:petsadoption/Views/Screens/forget_passworg.dart';
+import 'Sign_up.dart';
+import 'forget_passworg.dart';
 import 'package:petsadoption/Views/Widgets/customTextFormField.dart';
 import 'package:petsadoption/Views/Widgets/custom_btn.dart';
 import 'package:petsadoption/Views/Widgets/custom_iconBTN.dart';
@@ -14,7 +14,7 @@ import 'package:petsadoption/constants.dart';
 import 'package:petsadoption/controller/auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'home_screen.dart';
+import '../navBtnScreens/home_screen.dart';
 class Login extends StatefulWidget {
   static String id='login';
   @override
@@ -144,13 +144,13 @@ checkSigned()async{
                                       loading=true;
 
                                     });
-                                    FirebaseAuth fauth =FirebaseAuth.instance;
+                                 //   FirebaseAuth fauth =FirebaseAuth.instance;
 
                                     await auth.signIn(controllerEmail.text, controllerPass.text);
                                     SharedPreferences pref=await SharedPreferences.getInstance();
                                     setState(() {
                                       pref.setBool('signed',true);
-                                      pref.setString('userUid',fauth.currentUser!.uid);
+                                    //  pref.setString('userUid',fauth.currentUser!.uid);
 
                                     });
                                     Navigator.popAndPushNamed(context, HomePage.id);

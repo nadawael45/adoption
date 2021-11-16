@@ -8,12 +8,16 @@ class CustomBtn extends StatefulWidget {
   double width;
   double radius;
   double size;
+  Color? color;
+  Color? colorTxt;
+
 
   String?labelText;
   var onTap;
 
 
-  CustomBtn({this.height=50, this.width=double.infinity, this.radius=8, this.labelText,this.onTap,this.size=23});
+  CustomBtn({this.height=50, this.width=double.infinity, this.radius=8,
+    this.labelText,this.onTap,this.size=23,this.color=primaryColor,this.colorTxt=Colors.white});
 
   @override
   _CustomBtnState createState() => _CustomBtnState();
@@ -31,7 +35,7 @@ class _CustomBtnState extends State<CustomBtn> {
             child: ElevatedButton(
               onPressed: widget.onTap,
               child: Text(widget.labelText!, style: GoogleFonts.amiri(
-                  color: Colors.white,
+                  color: widget.colorTxt,
                   fontSize: widget.size,
                   fontWeight: FontWeight.bold,
                   height: 1.5,
@@ -40,7 +44,7 @@ class _CustomBtnState extends State<CustomBtn> {
               style: ButtonStyle(
 
                 backgroundColor: MaterialStateProperty.resolveWith((
-                    states) => primaryColor), shape:
+                    states) => widget.color), shape:
               MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),)
