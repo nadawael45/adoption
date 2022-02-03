@@ -2,7 +2,7 @@
 
 A new Flutter application.
 
-
+## Images:
 ![photo_2022-02-03_16-12-11](https://user-images.githubusercontent.com/89478500/152370688-13ea8116-6ba7-498c-94a1-be7e596ee18c.jpg)
 ![photo_2022-02-03_16-12-17](https://user-images.githubusercontent.com/89478500/152370760-7664523d-ca34-4e5d-b27c-92767d3a5648.jpg)
 ![photo_2022-02-03_16-12-24](https://user-images.githubusercontent.com/89478500/152370966-af2d1d7b-2e53-4189-9876-bd3380962b33.jpg)
@@ -13,7 +13,7 @@ A new Flutter application.
 
 
 
-## Screens contain:
+### Screens contain:
 => Onboarding
 
 => Login
@@ -22,17 +22,21 @@ A new Flutter application.
 
 => Sign Up
 
-=> Complete Profile
-
-=> OTP Verification
-
 => Home Page
 
-=> Product Details
+=> See All Animals
 
-=> Order
+=> See All Clinics
+
+=> Clinic Details
+
+=> Animals Details
 
 => Profile
+
+=> Add a new pet
+
+=> Favourite
 
 => Bottom Navigation Bar
 
